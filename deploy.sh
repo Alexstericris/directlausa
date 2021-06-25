@@ -12,3 +12,8 @@ git add -A
 git commit -m 'deploy'
 git push -f git@github.com:Alexstericris/directlausa.git master:gh-pages
 cd -
+DIR="docs"
+if [ ! -d $DIR ]
+then
+  ln -s dist/ docs
+fi
